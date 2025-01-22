@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+body {
+  background-image: url("background.png");
+  background-size: cover; /* Optional: Adjusts the size of the background image */
+  background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+  background-position: center center; /* Optional: Centers the background image */
+}
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Music Upload Page">
-    <title>Upload Music - GitHub</title>
+    <meta name="description" content="Personal GitHub Page">
+    <title>Your Name - GitHub</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .upload-container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .upload-container h2 {
-            margin: 0 0 15px;
-        }
-        .upload-container input[type="file"] {
-            display: block;
-            margin: 10px 0;
-        }
-        .upload-container button {
-            padding: 10px 15px;
-            background: #007bff;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .upload-container button:hover {
-            background: #0056b3;
-        }
-        .message {
-            margin-top: 15px;
-            color: green;
-        }
-    </style>
 </head>
 <body>
-    <div class="upload-container">
-        <h2>Upload Music</h2>
-        <form id="uploadForm">
-            <input type="file" id="musicFile" accept="audio/*">
-            <button type="submit">Upload</button>
-        </form>
-        <div class="message" id="message"></div>
+    <button class="menu-btn" onclick="openSidebar()">☰ Menu</button>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">✖</button>
+        <ul>
+            <li><a href="https://dandcool.github.io/">Home</a></li>
+            <li><a href="https://dandcool.github.io/portfolio.html">Portfolio</a></li>
+            <li><a href="https://dandcool.github.io/about.html">About</a></li>
+            <li><a href="https://dandcool.github.io/contact.html">Contact</a></li>
+            <li><a href="https://dandcool.github.io/persian.html">Switch to Persian</a></li>
+        </ul>
     </div>
+
+    <div class="content">
+        <header class="header-container">
+            <div class="header-text">
+                <h1>Amirali Hosseini Moghaddam - Music</h1>
+                <p>Listen to some of my favorite music!</p>
+            </div>
+            <div class="header-image">
+                <img src="photo_2025-01-20_00-01-31.jpg" alt="Profile Picture">
+            </div>
+        </header>
+
+        <section class="box about">
+            <h2>About the songs</h2>
+            <p>These are a couple of songs I listen to sometimes...</p>
+        </section>
+
+        <section class="box projects">
+            <h2>Things I do:</h2>
+            <ul>
+                <li>
+                    <h3>I follow rivers - Lykke li</h3>
+                    
+                </li>
+                <li>
+                    <h3>Souvenir - Selena Gomez</h3>
+                    
+                </li>
+            </ul>
+        </section>
+
+        <section class="box contact">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:amirali.hm.2006@gmail.com">amirali.hm.2006@gmail.com</a>.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Amirali Hosseini Moghaddam. All rights reserved.</p>
+        </footer>
+    </div>
+
     <script>
-        document.getElementById('uploadForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var fileInput = document.getElementById('musicFile');
-            var message = document.getElementById('message');
-            if (fileInput.files.length === 0) {
-                message.textContent = 'Please select a music file to upload.';
-                message.style.color = 'red';
-                return;
-            }
-            var file = fileInput.files[0];
-            if (!file.type.startsWith('audio/')) {
-                message.textContent = 'Please select a valid music file.';
-                message.style.color = 'red';
-                return;
-            }
-            message.textContent = 'File uploaded successfully!';
-            message.style.color = 'green';
-        });
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
     </script>
 </body>
 </html>
