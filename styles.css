@@ -67,7 +67,7 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: #4b0082;
+    background-color: rgb(48, 25, 52);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -82,7 +82,7 @@ body {
 /* Header section */
 .header-container {
     text-align: center;
-    background-color: rgba(48, 25, 52);
+    background-color: rgb(48, 25, 52);
     color: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -125,7 +125,7 @@ body {
 }
 
 .box h2 {
-    color: #4b0082;
+    color: rgb(48, 25, 52);
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -135,7 +135,7 @@ footer {
     text-align: center;
     margin-top: 30px;
     padding: 20px;
-    background-color: rgba(75, 0, 130, 0.9);
+    background-color: rgba(48, 25, 52, 0.9);
     color: #fff;
     border-radius: 10px;
 }
